@@ -1,0 +1,249 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('fonts/Roboto-Bold.ttf'); format('truetype');
+    font-weight: bold;
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto-regular,roboto;
+}
+
+b {
+    font-family: roboto-bold,roboto;
+}
+
+body {
+
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#F0F0F0,#EBEBEB);
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin: 0px auto;
+    background: #000000;
+
+}
+
+header{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+}
+
+header .logo{
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+header ul{
+    display: flex;
+    justidy-content: center;
+    align-items: center;
+
+}
+
+header ul li{
+    list-style: none;
+    height:100%;
+    float: left;
+    margin-left: 20px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #000000;
+}
+
+header ul li a:hover{
+    color: #60B2C3
+}
+
+
+/* @media (max-width: 1024px) {
+
+}
+
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden;
+    }
+
+.hamburger {
+    display: block;
+    width: 35px;
+    cursor: pointer;
+
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+
+
+
+ul {
+    opacity: 0;
+    transform: translateX(-20px);
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+}
+}
+*/
+
+
+main .main-picture{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+    postion: relative;
+    background-size: cover;
+    object-position: center 25%;
+}
+
+.content_text {
+    background-image: url('../images/background-main-1.jpg');
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0007; background-blend-mode: darken;
+    text-align: center;
+    color: white;
+
+    /* Pro fotku, přes celý screen
+    padding: 350px 260px */
+    padding: 100px 10px;
+    margin-top: 50px;
+    text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+}
+
+.letter-spacing {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.spacer {
+    background-image: url('../images/background-main-1.jpg');
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 10px;
+
+}
+
+.content_text h1 {
+    font-size: 45px;
+    text-align: center;
+
+}
+
+.content_text h2 {
+    margin-top: 15px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.second-picture {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 50px;
+    postion: relative;
+    background-size: cover;
+    object-position: center 10%;
+}
+
+.Nase_kocicky {
+    text-align: center;
+    padding: 40px 0px 15px 0px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.row img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: auto;
+    width: auto;
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+    padding: 5px;
+}
+
+.row {
+    position: absolute;
+    object-fit: cover;
+    display: block;
+    max-width: 2000px;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+footer{
+    padding-bottom: 20px;
+    background: yellow;
+}
+
+
+
+
+

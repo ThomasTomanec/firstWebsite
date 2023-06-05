@@ -1,0 +1,527 @@
+@font-face {
+    font-family: Roboto-Light;
+    src: url('fonts/Roboto-Light.ttf'); format('truetype');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('fonts/Roboto-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: Roboto-Medium;
+    src: url('fonts/Roboto-Medium.ttf'); format('truetype');
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('fonts/Roboto-Bold.ttf'); format('truetype');
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: rgb(241, 241, 235);
+}
+nav{
+    font-family: Roboto-Medium;
+    position: fixed;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #1b1b1b;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+    z-index: 999;
+}
+nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+
+nav ul li{
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover{
+    color: #111;
+    background: #fff;
+}
+
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    nav{
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 1250px) {
+    nav .menu-btn i{
+        display: block;
+    }
+
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #111;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked ~ ul{
+        left: 0;
+    }
+
+    nav ul li{
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    nav ul li a{
+        width: 100%;
+        margin-left: -100%;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    #click:checked ~ ul li a{
+        margin-left: 0px;
+    }
+
+    nav ul li a.active,
+    nav ul li a:hover{
+        color: #111;
+        background: #fff;
+    }
+}
+
+
+.buy-informations h4 {
+    text-align: right;
+}
+
+button {
+    font-family: Roboto-Medium;
+
+    font-size: 18px;
+    color: #c1121f;
+    background-color: white;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup .content_con{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+
+    width: 450px;
+    height: 220px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay{
+    display:block;
+}
+
+.popup.active .content_con {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.fix {
+    background-image: linear-gradient(160deg, #83bfea, #345c78);
+}
+/*----------------*/
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 30px 30px 30px;
+
+}
+
+.content_text {
+    background-image: url('../images/regdoll-koshka-golubye-glaza-vzgliad-lapki-podushki.jpeg');
+    background-position: center 0%;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #0007; background-blend-mode: darken;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    padding: 110px 10px 55px;
+    text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+}
+
+.letter-spacing {
+    font-family: Roboto-Regular;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.content_text h1 {
+    font-size: 45px;
+    text-align: center;
+}
+
+.content_text h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.NK-picture{
+    max-width: 100%;
+    width: 621px;
+    height: 389px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.row {
+
+    margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    margin: 10px;
+    border-radius: 30px 30px 0 0;
+}
+
+.content.text h3{
+    padding-bottom: 10px;
+    font-family: Roboto-Bold;
+    font-size: 20px;
+}
+
+.content.text p{
+    padding-top: 10px;
+    font-family: Roboto-Bold;
+    font-size: 15px;
+
+}
+
+
+
+.content.text {
+    padding: 0 0px 22px 0;
+    text-align: center;
+    text-shadow: rgb(0 0 0 / 10%) 0px 4px 5px;
+}
+
+.line{
+    content:" ";
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    width: 30px;
+    top: 50%;
+    left: 0;
+    background: #000000;
+}
+
+
+
+.column:hover {
+    animation: bounce 2.5s infinite; //other browsers
+-webkit-animation: bounce 2.5s infinite; //webkit browsers
+-moz-animation: bounce 2.5s infinite; //firefox
+-o-animation: bounce 2.5s infinite; //opera
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    100% {
+        -webkit-transform: translateY(0);
+    }
+    50% {
+        -webkit-transform: translateY(-10px);
+    }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+
+
+/* first footer */
+footer .footer-image {
+    background-image: url('../images/regdoll-koshka-krasavitsa-golubye-glaza-korzina.jpeg');
+    background-position: center 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #0009; background-blend-mode: darken;
+    text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+    padding: 30px 10px;
+}
+
+footer .footer-content{
+    padding: 100px 60px 100px 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .subtitle {
+    font-family: Roboto-Medium;
+    color: #F0F0F0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+footer .right {
+    padding: 40px 60px 0px 60px;
+    color: #F0F0F0;
+    text-decoration: none;
+}
+
+footer .telephone{
+    font-family: Roboto-Bold;
+    padding-top: 5px;
+}
+footer .interest {
+    margin: 10px;
+}
+
+footer .adress {
+    font-family: Roboto-Light;
+    color: #F0F0F0;
+    text-decoration: none;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+footer .recommend {
+    padding: 30px 60px 20px 60px;
+}
+
+footer .title {
+    font-family: Roboto-Bold;
+    text-decoration: none;
+    color: #F0F0F0;
+    text-align: center;
+    font-size: 25px;
+}
+footer .links {
+    font-family: Roboto-Light;
+    padding-top: 10px;
+}
+
+footer .pages-link {
+    font-family: Roboto-Light;
+    font-size: 20px;
+    text-decoration: none;
+    color: #F0F0F0;
+}
+
+
+
+
+/* second footer */
+.footer .bottom-footer{
+    color: #F0F0F0;
+    padding: 30px 60px 60px 60px;
+}
+
+.content-information {
+    padding: 30px 130px 60px 130px;
+    background-color: 	#001618;
+    color: #F0F0F0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .page {
+    font-family: Roboto-Regular;
+    margin-top: 25px;
+}
+
+footer .contacts{
+    font-family: Roboto-Bold;
+    text-align: center;
+}
+
+.contacts .contacts-socials .facebook{
+    filter: brightness(0) invert(1);
+    max-width: 30px;
+}
+.contacts .contacts-socials .instagram{
+    filter: brightness(0) invert(1);
+    max-width: 30px;
+}
+
+
+#data\.items {
+    margin-top: 5px;
+}
+@media screen and (max-width: 1300px) {
+
+    .footer-content{
+        justify-content: space-between;
+    }
+
+    .content-information {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .content-information {
+        justify-content: center;
+    }
+
+    .page {
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .buy-informations h4 {
+        padding: 120px 15px 0px 0px;
+    }
+
+    .footer-content{
+        justify-content: space-between;
+    }
+
+    .content-information {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .footer-content {
+        justify-content: center;
+    }
+
+    footer .right {
+        text-align: center;
+    }
+
+    footer .recommend  {
+        text-align: center;
+    }
+}
